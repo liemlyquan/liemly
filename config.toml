@@ -1,17 +1,22 @@
 baseURL = ''
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Liem Ly'
 theme = 'hugo-coder'
 
 [[params.social]]
+  name = "Medium"
+  icon = "fa fa-medium fa-2x"
+  weight = 1
+  url = "https://www.medium.com/@liemlyquan"
+[[params.social]]
   name = "Github"
   icon = "fa fa-github fa-2x"
-  weight = 1
+  weight = 2
   url = "https://github.com/liemlyquan"
 [[params.social]]
   name = "LinkedIn"
   icon = "fa fa-linkedin fa-2x"
-  weight = 3
+  weight = 2
   url = "https://www.linkedin.com/in/liemlyquan/"
 
 # Menu links
@@ -19,8 +24,4 @@ theme = 'hugo-coder'
   name = "Blog"
   weight = 1
   url  = "posts/"
-[[menu.main]]
-  name = "About"
-  weight = 2
-  url = "about/"
 
