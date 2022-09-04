@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2020-08-02T07:00:00+07:00
-title = "Inital experience with Kafka"
+title = "Initial experience with Kafka"
 description = ""
 slug = ""
 authors = []
