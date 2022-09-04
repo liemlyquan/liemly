@@ -4,6 +4,7 @@ title = 'Liem Ly'
 theme = 'hugo-coder'
 author = 'Liem Ly'
 info = 'Technologist'
+googleAnalytics = 'G-1R1T2DMPBB'
 
 [params]
   author = "Liem Ly"
