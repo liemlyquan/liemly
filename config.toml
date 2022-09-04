@@ -10,11 +10,6 @@ info = 'Technologist'
   colorScheme = "auto"
 
 [[params.social]]
-  name = "Medium"
-  icon = "fa fa-medium fa-2x"
-  weight = 1
-  url = "https://www.medium.com/@liemlyquan"
-[[params.social]]
   name = "Github"
   icon = "fa fa-github fa-2x"
   weight = 2
