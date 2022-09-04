@@ -2,6 +2,7 @@ baseURL = 'https://liemly.me'
 languageCode = 'en-us'
 title = 'Liem Ly'
 theme = 'hugo-coder'
+disqusShortname = 'liemlyquan'
 
 [params]
   author = "Liem Ly"
