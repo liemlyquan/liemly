@@ -9,7 +9,6 @@ tags = ["digitalocean", "opencart"]
 categories = []
 externalLink = ""
 series = []
-disableComments = false
 +++
 
 This tutorial is based on [Chubbable's post](https://chubbable.com/how-to-install-opencart-2-0-on-ubuntu-14-vps) with some modifications and correction. Compared to the original post, there has been several changes since the time of posting. It is still one of of the most accurate tutorials for installing Opencart on DigitalOcean that I could found. Thanks Chubbable

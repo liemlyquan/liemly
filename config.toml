@@ -2,7 +2,8 @@ baseURL = 'https://liemly.me'
 languageCode = 'en-us'
 title = 'Liem Ly'
 theme = 'hugo-coder'
-disqusShortname = 'liemlyquan'
+author = 'Liem Ly'
+info = 'Technologist'
 
 [params]
   author = "Liem Ly"
@@ -23,6 +24,11 @@ disqusShortname = 'liemlyquan'
   icon = "fa fa-linkedin fa-2x"
   weight = 2
   url = "https://www.linkedin.com/in/liemlyquan/"
+[[params.social]]
+  name = "Email"
+  icon = "fa fa-inbox fa-2x"
+  weight = 2
+  url = "mailto:liemlyquan@gmail.com"
 
 # Menu links
 [[menu.main]]
