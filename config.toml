@@ -1,7 +1,11 @@
-baseURL = ''
+baseURL = 'https://liemly.me'
 languageCode = 'en-us'
 title = 'Liem Ly'
 theme = 'hugo-coder'
+
+[params]
+  author = "Liem Ly"
+  colorScheme = "auto"
 
 [[params.social]]
   name = "Medium"
