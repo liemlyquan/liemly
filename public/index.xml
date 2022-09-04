@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Liem Ly</title>
+    <link>/</link>
+    <description>Recent content on Liem Ly</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Dec 2021 07:24:23 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A year as tech lead</title>
+      <link>/posts/a-year-as-tech-lead/</link>
+      <pubDate>Sun, 12 Dec 2021 07:24:23 +0700</pubDate>
+      
+      <guid>/posts/a-year-as-tech-lead/</guid>
+      <description>End of the year has always been a good time for each of us to do a retrospective on how we did for the past year, and this year, I am doing a review on one of the significant changes of my life: being promoted to tech lead. The following is a brief summary of what I have learned and what I am looking forward to in the next year.</description>
+    </item>
+    
+  </channel>
+</rss>
