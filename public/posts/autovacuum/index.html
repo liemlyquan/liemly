@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Why autovacuum · Liem Ly
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liem Ly">
+<meta name="description" content="If you have been using PostgreSQL long enough, autovacuum should not be a foreign topic. If you are lucky enough to work on a busy database, this will be more or less a problem that you need to deal with in some ways
+
+  What autovacuum is ?
+  
+    
+    Link to heading
+  
+
+Let go one step back with vacuum. Vacuum is defined as follows VACUUM reclaims storage occupied by dead tuples. In normal PostgreSQL operation, tuples that are deleted or obsoleted by an update are not physically removed from their table; they remain present until a VACUUM is done. Therefore it&rsquo;s necessary to do VACUUM periodically, especially on frequently-updated tables.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why autovacuum">
+  <meta name="twitter:description" content="If you have been using PostgreSQL long enough, autovacuum should not be a foreign topic. If you are lucky enough to work on a busy database, this will be more or less a problem that you need to deal with in some ways
+What autovacuum is ? Link to heading Let go one step back with vacuum. Vacuum is defined as follows VACUUM reclaims storage occupied by dead tuples. In normal PostgreSQL operation, tuples that are deleted or obsoleted by an update are not physically removed from their table; they remain present until a VACUUM is done. Therefore it’s necessary to do VACUUM periodically, especially on frequently-updated tables.">
+
+<meta property="og:url" content="http://localhost:1313/posts/autovacuum/">
+  <meta property="og:site_name" content="Liem Ly">
+  <meta property="og:title" content="Why autovacuum">
+  <meta property="og:description" content="If you have been using PostgreSQL long enough, autovacuum should not be a foreign topic. If you are lucky enough to work on a busy database, this will be more or less a problem that you need to deal with in some ways
+What autovacuum is ? Link to heading Let go one step back with vacuum. Vacuum is defined as follows VACUUM reclaims storage occupied by dead tuples. In normal PostgreSQL operation, tuples that are deleted or obsoleted by an update are not physically removed from their table; they remain present until a VACUUM is done. Therefore it’s necessary to do VACUUM periodically, especially on frequently-updated tables.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:tag" content="PostgreSQL">
+    <meta property="article:tag" content="Database">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/autovacuum/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liem Ly
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/autovacuum/">
+              Why autovacuum
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/postgresql/">PostgreSQL</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/database/">Database</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>If you have been using PostgreSQL long enough, autovacuum should not be a foreign topic. If you are lucky enough to work on a busy database, this will be more or less a problem that you need to deal with in some ways</p>
+<h2 id="what-autovacuum-is-">
+  What autovacuum is ?
+  <a class="heading-link" href="#what-autovacuum-is-">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Let go one step back with vacuum. Vacuum is defined as follows <a href="https://www.postgresql.org/docs/current/sql-vacuum.html"  class="external-link" target="_blank" rel="noopener">VACUUM reclaims storage occupied by dead tuples. In normal PostgreSQL operation, tuples that are deleted or obsoleted by an update are not physically removed from their table; they remain present until a VACUUM is done. Therefore it&rsquo;s necessary to do VACUUM periodically, especially on frequently-updated tables.</a></p>
+<p>Autovacuum facilities automatic vacuum operation, so that the operators do not have to manually perform these actions</p>
+<h2 id="why-autovacuum">
+  Why autovacuum
+  <a class="heading-link" href="#why-autovacuum">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="note">
+  Note
+  <a class="heading-link" href="#note">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>To observe some of the below mentioned queries, you can try running this command when autovacuum is taking place:</p>
+<pre tabindex="0"><code class="language-other" data-lang="other">SELECT now() - query_start as &#34;runtime&#34;, state, query, pid
+FROM pg_stat_activity 
+WHERE now() - query_start &gt; &#39;1 seconds&#39;::interval
+AND state = &#39;active&#39;
+ORDER BY runtime DESC;
+</code></pre><h3 id="clean-up-unused-data">
+  Clean up unused data
+  <a class="heading-link" href="#clean-up-unused-data">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>As stated from the vacuum, it can help us gain back some of the storage for obsolete data. Note that autovacuum will not always return the storage space back to the disk. However, it will mark the old spaces as available for future insertion, which should slow down the speed of growth.</p>
+<p>This operation can be observed when you see the command of such inside the</p>
+<p><code>autovacuum {table_name}</code></p>
+<h3 id="prevent-transaction-wraparound">
+  Prevent transaction wraparound
+  <a class="heading-link" href="#prevent-transaction-wraparound">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>PostgreSQL relies on transaction&rsquo;s mechanism relies on the transaction IDs. However, transaction ID has a limitation of 2.1 billion. Once that limit is reached, the database Thus, PostgreSQL would need some mechanism to ensure that this limit is not reached</p>
+<p>This operation can be observed when you see the command of such inside the</p>
+<p><code>autovacuum {table_name} (to prevent wraparound)</code></p>
+<h3 id="analyze">
+  Analyze
+  <a class="heading-link" href="#analyze">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Analyze is an operation to do analysis on a table, from which query planner can make better plans based on the newer statistics. Analyze can be run on-demand, if we know we have just made significant change to the content of table, or it will be triggered by autovacuum</p>
+<p>This operation can be observed when you see the command of such</p>
+<p><code>autovacuum analyze {table_name}</code></p>
+<h2 id="problem-with-autovacuum">
+  Problem with autovacuum
+  <a class="heading-link" href="#problem-with-autovacuum">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>If autovacuum is all good, without any downside, it would have been an easy life for all of us, who are PostgreSQL. However, there is some cavaet coming with us</p>
+<h3 id="higher-cpumem-and-iops">
+  Higher CPU/MEM and IOPS
+  <a class="heading-link" href="#higher-cpumem-and-iops">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The operation does not come without any cost. You will observe higher CPU and Memory usage due to the autovacuum. This will then directly impact the performance of the database during that period.</p>
+<h3 id="intensive-autovacuum">
+  Intensive autovacuum
+  <a class="heading-link" href="#intensive-autovacuum">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>On the other hands, in certain cases, you may want to accelerate the speed of vacuum (e.g: when transaction ID is too high, when the database is first restore), you may want to do your own vacuum, which will normally far more aggressive than autovacuum itself</p>
+<h2 id="optimizing-autovacuum">
+  Optimizing autovacuum
+  <a class="heading-link" href="#optimizing-autovacuum">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Depending on the available resources, we may want to adjust some of the PostgreSQL parameters to fit with your usage patterns. On some of the managed services, e.g: RDS, some of these settings would be auto tuned to some extent, based on your machine computing resource</p>
+<p>autovacuum_max_workers: Maximum number of workers to do autovacuum. This will help to do autovacuum on multiple tables at once</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Liem Ly 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R1T2DMPBB"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1R1T2DMPBB');
+        }
+      </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

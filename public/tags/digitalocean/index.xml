@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digitalocean on Liem Ly</title>
+    <link>http://localhost:1313/tags/digitalocean/</link>
+    <description>Recent content in Digitalocean on Liem Ly</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Feb 2017 07:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/digitalocean/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Opencart on DigitalOcean</title>
+      <link>http://localhost:1313/posts/install-opencart-on-digitalocean/</link>
+      <pubDate>Sat, 25 Feb 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/install-opencart-on-digitalocean/</guid>
+      <description>&lt;p&gt;This tutorial is based on &lt;a href=&#34;https://chubbable.com/how-to-install-opencart-2-0-on-ubuntu-14-vps&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chubbable&amp;rsquo;s post&lt;/a&gt; with some modifications and correction. Compared to the original post, there has been several changes since the time of posting. It is still one of of the most accurate tutorials for installing Opencart on DigitalOcean that I could found. Thanks Chubbable&#xA;All the images in this post are from Chubbable&amp;rsquo;s article.&lt;/p&gt;&#xA;&lt;h2 id=&#34;step-1-create-a-vps-withlamp&#34;&gt;&#xA;  Step 1: Create a VPS with LAMP&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#step-1-create-a-vps-withlamp&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Login to your Digital Ocean account and click on the Create Droplet button.&lt;/li&gt;&#xA;&lt;li&gt;If you just want to play around, you may opt to choose $5/month. But if you&amp;rsquo;re migrating your OpenCart store from a shared hosting service, then $10/month should be minimum.&lt;/li&gt;&#xA;&lt;li&gt;Choose a Region or Location. It&amp;rsquo;s best if you choose the location of your Data Center that is closest to your target audience.&lt;/li&gt;&#xA;&lt;li&gt;Select Image / Application. Click on the Applications tab and scroll down a bit and click to choose LAMP 16.04.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create an SSH Key Pair to use with your OpenCart VPS (optional).&#xA;&lt;ul&gt;&#xA;&lt;li&gt;If you&amp;rsquo;re on Windows, then follow this video tutorial on how to create SSH Key Pair on Windows.&lt;/li&gt;&#xA;&lt;li&gt;If you&amp;rsquo;re on Linux, this video guide will teach you how to create your SSH Key Pair for your VPS.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Copy and paste in the content of your .pub SSH key. Enter a comment or name for it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Finally, click on the Create Droplet button. This should start creating your VPS.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;That&amp;rsquo;s all for creating your VPS. LAMP should be installed after your droplet is created.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

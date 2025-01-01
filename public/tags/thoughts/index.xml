@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thoughts on Liem Ly</title>
+    <link>http://localhost:1313/tags/thoughts/</link>
+    <description>Recent content in Thoughts on Liem Ly</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2022 10:18:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be a rockstar, but not irreplacable</title>
+      <link>http://localhost:1313/posts/be-a-rockstar-but-not-irreplacable/</link>
+      <pubDate>Sun, 09 Oct 2022 10:18:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/be-a-rockstar-but-not-irreplacable/</guid>
+      <description>&lt;p&gt;There has been a popular career advice, on that you should become irreplacable at work. However, from my point of view, while it can be, in certain rare time, for a short period of time, you should not aim for such as a career philosphy&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-being-replacable-&#34;&gt;&#xA;  Why being replacable ?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why-being-replacable-&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;From the company stand point, the bus factor of 1 is always dangerous. If there is certain part of your system critical path, is wholly owned by a single person, you know you are doomed. The sky would fall even if this person was to take a long vacation&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

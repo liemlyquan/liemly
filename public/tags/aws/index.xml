@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on Liem Ly</title>
+    <link>http://localhost:1313/tags/aws/</link>
+    <description>Recent content in Aws on Liem Ly</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Mar 2018 07:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding the right bottleneck</title>
+      <link>http://localhost:1313/posts/finding-the-right-bottleneck/</link>
+      <pubDate>Thu, 15 Mar 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/finding-the-right-bottleneck/</guid>
+      <description>&lt;p&gt;One of my favorite area of software engineer is performance tuning. No matter which kind of software I am writing, a desktop/mobile/web app, or even a script, I always want it to super fast, with as little resource as possible. Yet, there have been some occurrences that I have wrote/failed to detect some bottlenecks that makes me closer to my wishes.&lt;/p&gt;&#xA;&lt;p&gt;In university, when I was doing a website development for event, we run into free-tier bandwidth limit of Google App Engine after a few hours when the number of users spike. I tried to optimize in many ways, including but not limited to: minify source code, optimize process, cache. In the end, I found out that there is one single image that I had not optimized, and it was on the main page of the website. Thus, each main page loading in fact takes MBs of bandwidth. After finding out the problem and optimizing the images, the bandwidth never go over 25% again. In another word, ~8 times less bandwidth used.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

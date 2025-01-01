@@ -2,9 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Liem Ly</title>
-    <link>/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Liem Ly</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2022 10:18:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thoughts</title>
+      <link>http://localhost:1313/tags/thoughts/</link>
+      <pubDate>Sun, 09 Oct 2022 10:18:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/thoughts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Message-Queue</title>
+      <link>http://localhost:1313/tags/message-queue/</link>
+      <pubDate>Sun, 02 Aug 2020 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/message-queue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dev-Tool</title>
+      <link>http://localhost:1313/tags/dev-tool/</link>
+      <pubDate>Sat, 24 Nov 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/dev-tool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aws</title>
+      <link>http://localhost:1313/tags/aws/</link>
+      <pubDate>Thu, 15 Mar 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Optimization</title>
+      <link>http://localhost:1313/tags/optimization/</link>
+      <pubDate>Thu, 15 Mar 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/optimization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Random</title>
+      <link>http://localhost:1313/tags/random/</link>
+      <pubDate>Sun, 11 Mar 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/random/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IOS</title>
+      <link>http://localhost:1313/tags/ios/</link>
+      <pubDate>Sat, 27 May 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/ios/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Migration</title>
+      <link>http://localhost:1313/tags/migration/</link>
+      <pubDate>Sat, 27 May 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/migration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interview</title>
+      <link>http://localhost:1313/tags/interview/</link>
+      <pubDate>Sun, 21 May 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/interview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Digitalocean</title>
+      <link>http://localhost:1313/tags/digitalocean/</link>
+      <pubDate>Sat, 25 Feb 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/digitalocean/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opencart</title>
+      <link>http://localhost:1313/tags/opencart/</link>
+      <pubDate>Sat, 25 Feb 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/opencart/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>http://localhost:1313/tags/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>http://localhost:1313/tags/postgresql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/postgresql/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

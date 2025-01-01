@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Install Opencart on DigitalOcean · Liem Ly
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liem Ly">
+<meta name="description" content="This tutorial is based on Chubbable&rsquo;s post with some modifications and correction. Compared to the original post, there has been several changes since the time of posting. It is still one of of the most accurate tutorials for installing Opencart on DigitalOcean that I could found. Thanks Chubbable
+All the images in this post are from Chubbable&rsquo;s article.
+
+  Step 1: Create a VPS with LAMP
+  
+    
+    Link to heading
+  
+
+
+Login to your Digital Ocean account and click on the Create Droplet button.
+If you just want to play around, you may opt to choose $5/month. But if you&rsquo;re migrating your OpenCart store from a shared hosting service, then $10/month should be minimum.
+Choose a Region or Location. It&rsquo;s best if you choose the location of your Data Center that is closest to your target audience.
+Select Image / Application. Click on the Applications tab and scroll down a bit and click to choose LAMP 16.04.
+
+Create an SSH Key Pair to use with your OpenCart VPS (optional).
+
+If you&rsquo;re on Windows, then follow this video tutorial on how to create SSH Key Pair on Windows.
+If you&rsquo;re on Linux, this video guide will teach you how to create your SSH Key Pair for your VPS.
+
+
+Copy and paste in the content of your .pub SSH key. Enter a comment or name for it.
+
+
+Finally, click on the Create Droplet button. This should start creating your VPS.
+
+That&rsquo;s all for creating your VPS. LAMP should be installed after your droplet is created.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Install Opencart on DigitalOcean">
+  <meta name="twitter:description" content="This tutorial is based on Chubbable’s post with some modifications and correction. Compared to the original post, there has been several changes since the time of posting. It is still one of of the most accurate tutorials for installing Opencart on DigitalOcean that I could found. Thanks Chubbable All the images in this post are from Chubbable’s article.
+Step 1: Create a VPS with LAMP Link to heading Login to your Digital Ocean account and click on the Create Droplet button. If you just want to play around, you may opt to choose $5/month. But if you’re migrating your OpenCart store from a shared hosting service, then $10/month should be minimum. Choose a Region or Location. It’s best if you choose the location of your Data Center that is closest to your target audience. Select Image / Application. Click on the Applications tab and scroll down a bit and click to choose LAMP 16.04. Create an SSH Key Pair to use with your OpenCart VPS (optional). If you’re on Windows, then follow this video tutorial on how to create SSH Key Pair on Windows. If you’re on Linux, this video guide will teach you how to create your SSH Key Pair for your VPS. Copy and paste in the content of your .pub SSH key. Enter a comment or name for it. Finally, click on the Create Droplet button. This should start creating your VPS. That’s all for creating your VPS. LAMP should be installed after your droplet is created.">
+
+<meta property="og:url" content="http://localhost:1313/posts/install-opencart-on-digitalocean/">
+  <meta property="og:site_name" content="Liem Ly">
+  <meta property="og:title" content="Install Opencart on DigitalOcean">
+  <meta property="og:description" content="This tutorial is based on Chubbable’s post with some modifications and correction. Compared to the original post, there has been several changes since the time of posting. It is still one of of the most accurate tutorials for installing Opencart on DigitalOcean that I could found. Thanks Chubbable All the images in this post are from Chubbable’s article.
+Step 1: Create a VPS with LAMP Link to heading Login to your Digital Ocean account and click on the Create Droplet button. If you just want to play around, you may opt to choose $5/month. But if you’re migrating your OpenCart store from a shared hosting service, then $10/month should be minimum. Choose a Region or Location. It’s best if you choose the location of your Data Center that is closest to your target audience. Select Image / Application. Click on the Applications tab and scroll down a bit and click to choose LAMP 16.04. Create an SSH Key Pair to use with your OpenCart VPS (optional). If you’re on Windows, then follow this video tutorial on how to create SSH Key Pair on Windows. If you’re on Linux, this video guide will teach you how to create your SSH Key Pair for your VPS. Copy and paste in the content of your .pub SSH key. Enter a comment or name for it. Finally, click on the Create Droplet button. This should start creating your VPS. That’s all for creating your VPS. LAMP should be installed after your droplet is created.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-02-25T07:00:00+07:00">
+    <meta property="article:modified_time" content="2017-02-25T07:00:00+07:00">
+    <meta property="article:tag" content="Digitalocean">
+    <meta property="article:tag" content="Opencart">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/install-opencart-on-digitalocean/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liem Ly
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/install-opencart-on-digitalocean/">
+              Install Opencart on DigitalOcean
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2017-02-25T07:00:00&#43;07:00">
+                February 25, 2017
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/digitalocean/">Digitalocean</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/opencart/">Opencart</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>This tutorial is based on <a href="https://chubbable.com/how-to-install-opencart-2-0-on-ubuntu-14-vps"  class="external-link" target="_blank" rel="noopener">Chubbable&rsquo;s post</a> with some modifications and correction. Compared to the original post, there has been several changes since the time of posting. It is still one of of the most accurate tutorials for installing Opencart on DigitalOcean that I could found. Thanks Chubbable
+All the images in this post are from Chubbable&rsquo;s article.</p>
+<h2 id="step-1-create-a-vps-withlamp">
+  Step 1: Create a VPS with LAMP
+  <a class="heading-link" href="#step-1-create-a-vps-withlamp">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Login to your Digital Ocean account and click on the Create Droplet button.</li>
+<li>If you just want to play around, you may opt to choose $5/month. But if you&rsquo;re migrating your OpenCart store from a shared hosting service, then $10/month should be minimum.</li>
+<li>Choose a Region or Location. It&rsquo;s best if you choose the location of your Data Center that is closest to your target audience.</li>
+<li>Select Image / Application. Click on the Applications tab and scroll down a bit and click to choose LAMP 16.04.
+<ul>
+<li>Create an SSH Key Pair to use with your OpenCart VPS (optional).
+<ul>
+<li>If you&rsquo;re on Windows, then follow this video tutorial on how to create SSH Key Pair on Windows.</li>
+<li>If you&rsquo;re on Linux, this video guide will teach you how to create your SSH Key Pair for your VPS.</li>
+</ul>
+</li>
+<li>Copy and paste in the content of your .pub SSH key. Enter a comment or name for it.</li>
+</ul>
+</li>
+<li>Finally, click on the Create Droplet button. This should start creating your VPS.</li>
+</ul>
+<p>That&rsquo;s all for creating your VPS. LAMP should be installed after your droplet is created.</p>
+<h2 id="step-2-login-to-your-opencartvps">
+  Step 2: Login to your OpenCart VPS
+  <a class="heading-link" href="#step-2-login-to-your-opencartvps">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Login to your newly created VPS and use your IP address. Copy the IP address from your hosting control panel. Then launch a terminal (or PuTTy if on Windows) and SSH your way in to your VPS.
+The command for ssh:</p>
+<p><code>ssh -i .ssh/name-of-your-ssh-key root@your.server.ip.address</code></p>
+<ul>
+<li>Note: In Linux or Unix, the default SSH folder path is ~/.ssh or /home/anyuser-name/.ssh</li>
+</ul>
+<p>Secure MySQL server by following the wizard.</p>
+<ul>
+<li>
+<p>Take note first of your MySQL root password. Write it down or copy to somewhere safe.
+<img src="/assets/install-opencart-on-digitalocean/mysql-password.png" alt="MySQL password"></p>
+</li>
+<li>
+<p>Now run <code>mysql_secure_installation</code> and follow the wizard.</p>
+</li>
+<li>
+<p>Enter mysql_secure_installation command and enter your copied MySQL root password.</p>
+</li>
+<li>
+<p>Then answer the following question like so:</p>
+</li>
+</ul>
+<pre tabindex="0"><code>
+Enable password validator? - answer n for no
+Change the root password? - answer n for no
+Remove anonymous users? - answer n for no
+Disallow root login remotely? - answer n for no
+Remove test database and access to it? - answer n
+Reload privileges? answer y for yes
+</code></pre><p>And it should be all done after that.</p>
+<h2 id="step-3-update-the-system--installunzip">
+  Step 3: Update the system &amp; install Unzip
+  <a class="heading-link" href="#step-3-update-the-system--installunzip">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Update your system by doing the following command: <code>apt-get update &amp;&amp; apt-get upgrade</code></p>
+<p>It should take a little while to complete.
+Install Unzip via apt-get, this software shall be used to extract the download archived file o OpenCart. Run the command
+<code>apt-get install -y unzip</code></p>
+<h2 id="step-4-download-opencart-extract">
+  Step 4: Download OpenCart &amp; extract
+  <a class="heading-link" href="#step-4-download-opencart-extract">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>While still on your terminal, type wget then SPACEBAR then paste in the copied download link address, and hit ENTER key. The command should look like below.</p>
+<p><code>wget https://github.com/opencart/opencart/archive/master.zip</code></p>
+<p>Do a ls command on your ~ (home) folder, you should see a new file named master.zip</p>
+<p>Extract the file by doing unzip command:</p>
+<p><code>unzip master.zip</code></p>
+<p>Do a ls command. You shold see a new folder named opencart-master
+Copy the contents of the upload folder, which is inside of opencart-master folder, to /var/www/html. This folder should hold all the OpenCart files, it&rsquo;s your public_html folder.</p>
+<p>If you make a cd opencart-master command, you should see the folder.</p>
+<p>To copy all the files inside the upload folder, do the following command:</p>
+<p><code>cp -R ~/opencart-master/upload/* /var/www/html/</code></p>
+<p>Double-check that you have copied all the files, do the following;</p>
+<p><code>cd /var/www/html</code></p>
+<p>Then do a ls command.</p>
+<p><img src="/assets/install-opencart-on-digitalocean/ls-after-download.png" alt="ls after download"></p>
+<h2 id="step-5-create-opencart-configphp-file">
+  Step 5: Create OpenCart config.php file
+  <a class="heading-link" href="#step-5-create-opencart-configphp-file">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The command;</p>
+<p><code>touch /var/www/html/admin/config.php</code></p>
+<p>and</p>
+<p><code>touch /var/www/html/config.php</code></p>
+<h2 id="step-6-set-folder-permission-andowner">
+  Step 6: Set folder permission and owner
+  <a class="heading-link" href="#step-6-set-folder-permission-andowner">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>To set folder owner for the OpenCart folder, do the following command:</p>
+<p><code>chown -R www-data:www-data /var/www/html</code></p>
+<p>To set folder permisson, 755 for all folders while 644 for all files:</p>
+<p><code>chmod -R a=r,a+X,u+w /var/www/html</code></p>
+<h2 id="step-7-enable-mcrypt-phpmodule">
+  Step 7: Enable Mcrypt PHP module
+  <a class="heading-link" href="#step-7-enable-mcrypt-phpmodule">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>There are several module missing from LAMP installer. Thus, we have to install these ourselves. Please take note that the last two are not required by Opencart, but will cause error with refreshing module and installing extension</p>
+<pre tabindex="0"><code>apt-get install php7.0-curl  
+apt-get install php7.0-mcrypt  
+apt-get install php7.0-zip  
+apt-get install php7.0-xml  
+apt-get install php7.0-dom
+</code></pre><p>Restart Apache webserver</p>
+<p><code>service apache2 restart</code></p>
+<h2 id="step-8-create-opencartdatabase">
+  Step 8: Create OpenCart Database
+  <a class="heading-link" href="#step-8-create-opencartdatabase">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Let&rsquo;s create a new database for OpenCart exclusive use. We will use the command-line, so no PHPMyAdmin involve here.
+Login as root to MySQL server</p>
+<p><code>mysql -u root -p</code></p>
+<p>Then enter your root password. It won&rsquo;t be printed on your screen.</p>
+<p>Create the database</p>
+<p>For the sake of demonstration, I will name my OpenCart database as opencartdb, user is opencartuser, password is letmepass.
+So here we go…</p>
+<p><code>create database opencartdb;</code></p>
+<p>Hit Enter key.</p>
+<p>Create the database user and grant privileges
+<code>grant all on opencartdb.* to 'opencartuser'@'localhost' identified by 'letmepass';</code></p>
+<p>Hit enter key.</p>
+<p>Refresh MySQL</p>
+<p><code>flush privileges;</code></p>
+<p>That&rsquo;s it! That&rsquo;s how to create a database using command-line. Next, install OpenCart.</p>
+<h2 id="step-9-installopencart">
+  Step 9: Install OpenCart
+  <a class="heading-link" href="#step-9-installopencart">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Time to install OpenCart</p>
+<p>Launch your favorite web browser and point to your VPS IP address.</p>
+<p>You should be redirected to OpenCart&rsquo;s installation wizard.</p>
+<p>Check the page, make sure that all is green. Which means… all the requirements are met by your VPS.
+<img src="/assets/install-opencart-on-digitalocean/requirement-passed.jpeg" alt="Requirement passed"></p>
+<p>Everything is straight-forward on this page, just fill all the fields with the proper data and install OpenCart.
+Click Continue button till you finish installing it.
+Delete the install folder for security reason.</p>
+<p><img src="/assets/install-opencart-on-digitalocean/finished-installation.png" alt="Finished installation"></p>
+<p><code>rm -rf /var/www/html/install</code></p>
+<p>And that&rsquo;s it! If you reached this far, then pat yourself on the back.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Liem Ly 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R1T2DMPBB"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1R1T2DMPBB');
+        }
+      </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

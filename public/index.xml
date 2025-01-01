@@ -2,19 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Liem Ly</title>
-    <link>/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Liem Ly</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Dec 2021 07:24:23 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Oct 2022 10:18:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A year as tech lead</title>
-      <link>/posts/a-year-as-tech-lead/</link>
-      <pubDate>Sun, 12 Dec 2021 07:24:23 +0700</pubDate>
-      
-      <guid>/posts/a-year-as-tech-lead/</guid>
-      <description>End of the year has always been a good time for each of us to do a retrospective on how we did for the past year, and this year, I am doing a review on one of the significant changes of my life: being promoted to tech lead. The following is a brief summary of what I have learned and what I am looking forward to in the next year.</description>
+      <title>Be a rockstar, but not irreplacable</title>
+      <link>http://localhost:1313/posts/be-a-rockstar-but-not-irreplacable/</link>
+      <pubDate>Sun, 09 Oct 2022 10:18:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/be-a-rockstar-but-not-irreplacable/</guid>
+      <description>&lt;p&gt;There has been a popular career advice, on that you should become irreplacable at work. However, from my point of view, while it can be, in certain rare time, for a short period of time, you should not aim for such as a career philosphy&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-being-replacable-&#34;&gt;&#xA;  Why being replacable ?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why-being-replacable-&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;From the company stand point, the bus factor of 1 is always dangerous. If there is certain part of your system critical path, is wholly owned by a single person, you know you are doomed. The sky would fall even if this person was to take a long vacation&lt;/p&gt;</description>
     </item>
-    
+    <item>
+      <title>Initial experience with Kafka</title>
+      <link>http://localhost:1313/posts/initial-experience-with-kafka/</link>
+      <pubDate>Sun, 02 Aug 2020 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/initial-experience-with-kafka/</guid>
+      <description>&lt;p&gt;Before starting my job at Parcel Perform, the usage of Kafka, or message queue in general, would sound ridiculous to me. I just thought to myself: &amp;ldquo;why do we have to add complexity to our system, instead of processing the data, we have to put it into a place, and then consume from that&amp;rdquo;. However, after months of using that, I have started to realize how (mostly) wrong I am.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker for local development</title>
+      <link>http://localhost:1313/posts/docker-for-local-development/</link>
+      <pubDate>Sat, 24 Nov 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/docker-for-local-development/</guid>
+      <description>&lt;p&gt;I first came across Docker two years ago, when I started working at Chopp. At that time, we are using Docker on our staging and production. Jenkins will run some tests through the code, building the Docker images, and deploy them to desired destinations. Now, after I joining Parcel Perform, I have had a chance to use Docker more extensively, even in local environment, and there are some noticeable changes compared to the old method that I could realize over a course of a month&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Finding the right bottleneck</title>
+      <link>http://localhost:1313/posts/finding-the-right-bottleneck/</link>
+      <pubDate>Thu, 15 Mar 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/finding-the-right-bottleneck/</guid>
+      <description>&lt;p&gt;One of my favorite area of software engineer is performance tuning. No matter which kind of software I am writing, a desktop/mobile/web app, or even a script, I always want it to super fast, with as little resource as possible. Yet, there have been some occurrences that I have wrote/failed to detect some bottlenecks that makes me closer to my wishes.&lt;/p&gt;&#xA;&lt;p&gt;In university, when I was doing a website development for event, we run into free-tier bandwidth limit of Google App Engine after a few hours when the number of users spike. I tried to optimize in many ways, including but not limited to: minify source code, optimize process, cache. In the end, I found out that there is one single image that I had not optimized, and it was on the main page of the website. Thus, each main page loading in fact takes MBs of bandwidth. After finding out the problem and optimizing the images, the bandwidth never go over 25% again. In another word, ~8 times less bandwidth used.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Achievement unlocked: Giving a recommendation</title>
+      <link>http://localhost:1313/posts/giving-a-recommendation/</link>
+      <pubDate>Sun, 11 Mar 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/giving-a-recommendation/</guid>
+      <description>&lt;p&gt;This week marks the first time I have ever given any a recommendation on LinkedIn. I know, some people have already been doing this since they are still in university. Why was this considered an achievement for me:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;I was very strict in giving recommendation or even references. If my friends/colleagues/bosses ask me if I know anyone who can help, I had to ensure that the one I refer would be very helpful.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Migrate from Objective-C to Swift</title>
+      <link>http://localhost:1313/posts/migrate-from-objective-c-to-swift/</link>
+      <pubDate>Sat, 27 May 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/migrate-from-objective-c-to-swift/</guid>
+      <description>&lt;h2 id=&#34;disclaimer&#34;&gt;&#xA;  Disclaimer&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#disclaimer&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;My background is an engineer with less than two years of industrial mobile development experience and less than a year in iOS (with some experience doing the server-side as well as Android development on the side), so you will probably find this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Beginner-friendly&lt;/li&gt;&#xA;&lt;li&gt;Containing flaw/nonoptimal/simply stupid/etc solutions. But hey, it works. At least Fabric agree with me (we started migration at the end of March).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/assets/migrate-from-objective-c-to-swift/crash-rate.png&#34; alt=&#34;Crash rate&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lessons learned from interview engineers (P.1)</title>
+      <link>http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</link>
+      <pubDate>Sun, 21 May 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</guid>
+      <description>&lt;h2 id=&#34;cvs-are-often-exaggerated&#34;&gt;&#xA;  CVs are (often) exaggerated&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#cvs-are-often-exaggerated&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;After screening and interviewing several candidates, I saw a real difference between what they wrote on their resume and what they truly know/did. I have seen several people claiming a bunch of programming languages on their CV despite having only 1,2 or even 0 years of professional experience. It turns out they have only tried out those in &amp;ldquo;Hello World&amp;rdquo; programs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install Opencart on DigitalOcean</title>
+      <link>http://localhost:1313/posts/install-opencart-on-digitalocean/</link>
+      <pubDate>Sat, 25 Feb 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/install-opencart-on-digitalocean/</guid>
+      <description>&lt;p&gt;This tutorial is based on &lt;a href=&#34;https://chubbable.com/how-to-install-opencart-2-0-on-ubuntu-14-vps&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chubbable&amp;rsquo;s post&lt;/a&gt; with some modifications and correction. Compared to the original post, there has been several changes since the time of posting. It is still one of of the most accurate tutorials for installing Opencart on DigitalOcean that I could found. Thanks Chubbable&#xA;All the images in this post are from Chubbable&amp;rsquo;s article.&lt;/p&gt;&#xA;&lt;h2 id=&#34;step-1-create-a-vps-withlamp&#34;&gt;&#xA;  Step 1: Create a VPS with LAMP&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#step-1-create-a-vps-withlamp&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Login to your Digital Ocean account and click on the Create Droplet button.&lt;/li&gt;&#xA;&lt;li&gt;If you just want to play around, you may opt to choose $5/month. But if you&amp;rsquo;re migrating your OpenCart store from a shared hosting service, then $10/month should be minimum.&lt;/li&gt;&#xA;&lt;li&gt;Choose a Region or Location. It&amp;rsquo;s best if you choose the location of your Data Center that is closest to your target audience.&lt;/li&gt;&#xA;&lt;li&gt;Select Image / Application. Click on the Applications tab and scroll down a bit and click to choose LAMP 16.04.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create an SSH Key Pair to use with your OpenCart VPS (optional).&#xA;&lt;ul&gt;&#xA;&lt;li&gt;If you&amp;rsquo;re on Windows, then follow this video tutorial on how to create SSH Key Pair on Windows.&lt;/li&gt;&#xA;&lt;li&gt;If you&amp;rsquo;re on Linux, this video guide will teach you how to create your SSH Key Pair for your VPS.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Copy and paste in the content of your .pub SSH key. Enter a comment or name for it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Finally, click on the Create Droplet button. This should start creating your VPS.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;That&amp;rsquo;s all for creating your VPS. LAMP should be installed after your droplet is created.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why autovacuum</title>
+      <link>http://localhost:1313/posts/autovacuum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/autovacuum/</guid>
+      <description>&lt;p&gt;If you have been using PostgreSQL long enough, autovacuum should not be a foreign topic. If you are lucky enough to work on a busy database, this will be more or less a problem that you need to deal with in some ways&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-autovacuum-is-&#34;&gt;&#xA;  What autovacuum is ?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-autovacuum-is-&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Let go one step back with vacuum. Vacuum is defined as follows &lt;a href=&#34;https://www.postgresql.org/docs/current/sql-vacuum.html&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VACUUM reclaims storage occupied by dead tuples. In normal PostgreSQL operation, tuples that are deleted or obsoleted by an update are not physically removed from their table; they remain present until a VACUUM is done. Therefore it&amp;rsquo;s necessary to do VACUUM periodically, especially on frequently-updated tables.&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

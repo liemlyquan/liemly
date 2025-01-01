@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PostgreSQL on Liem Ly</title>
+    <link>http://localhost:1313/tags/postgresql/</link>
+    <description>Recent content in PostgreSQL on Liem Ly</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why autovacuum</title>
+      <link>http://localhost:1313/posts/autovacuum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/autovacuum/</guid>
+      <description>&lt;p&gt;If you have been using PostgreSQL long enough, autovacuum should not be a foreign topic. If you are lucky enough to work on a busy database, this will be more or less a problem that you need to deal with in some ways&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-autovacuum-is-&#34;&gt;&#xA;  What autovacuum is ?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-autovacuum-is-&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Let go one step back with vacuum. Vacuum is defined as follows &lt;a href=&#34;https://www.postgresql.org/docs/current/sql-vacuum.html&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VACUUM reclaims storage occupied by dead tuples. In normal PostgreSQL operation, tuples that are deleted or obsoleted by an update are not physically removed from their table; they remain present until a VACUUM is done. Therefore it&amp;rsquo;s necessary to do VACUUM periodically, especially on frequently-updated tables.&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

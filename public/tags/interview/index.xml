@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview on Liem Ly</title>
+    <link>http://localhost:1313/tags/interview/</link>
+    <description>Recent content in Interview on Liem Ly</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 May 2017 07:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lessons learned from interview engineers (P.1)</title>
+      <link>http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</link>
+      <pubDate>Sun, 21 May 2017 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</guid>
+      <description>&lt;h2 id=&#34;cvs-are-often-exaggerated&#34;&gt;&#xA;  CVs are (often) exaggerated&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#cvs-are-often-exaggerated&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;After screening and interviewing several candidates, I saw a real difference between what they wrote on their resume and what they truly know/did. I have seen several people claiming a bunch of programming languages on their CV despite having only 1,2 or even 0 years of professional experience. It turns out they have only tried out those in &amp;ldquo;Hello World&amp;rdquo; programs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

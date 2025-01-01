@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Random on Liem Ly</title>
+    <link>http://localhost:1313/tags/random/</link>
+    <description>Recent content in Random on Liem Ly</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Mar 2018 07:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/random/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Achievement unlocked: Giving a recommendation</title>
+      <link>http://localhost:1313/posts/giving-a-recommendation/</link>
+      <pubDate>Sun, 11 Mar 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/giving-a-recommendation/</guid>
+      <description>&lt;p&gt;This week marks the first time I have ever given any a recommendation on LinkedIn. I know, some people have already been doing this since they are still in university. Why was this considered an achievement for me:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;I was very strict in giving recommendation or even references. If my friends/colleagues/bosses ask me if I know anyone who can help, I had to ensure that the one I refer would be very helpful.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

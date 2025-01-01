@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Migrate from Objective-C to Swift · Liem Ly
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liem Ly">
+<meta name="description" content="
+  Disclaimer
+  
+    
+    Link to heading
+  
+
+My background is an engineer with less than two years of industrial mobile development experience and less than a year in iOS (with some experience doing the server-side as well as Android development on the side), so you will probably find this post:
+
+Beginner-friendly
+Containing flaw/nonoptimal/simply stupid/etc solutions. But hey, it works. At least Fabric agree with me (we started migration at the end of March).
+
+">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Migrate from Objective-C to Swift">
+  <meta name="twitter:description" content="Disclaimer Link to heading My background is an engineer with less than two years of industrial mobile development experience and less than a year in iOS (with some experience doing the server-side as well as Android development on the side), so you will probably find this post:
+Beginner-friendly Containing flaw/nonoptimal/simply stupid/etc solutions. But hey, it works. At least Fabric agree with me (we started migration at the end of March).">
+
+<meta property="og:url" content="http://localhost:1313/posts/migrate-from-objective-c-to-swift/">
+  <meta property="og:site_name" content="Liem Ly">
+  <meta property="og:title" content="Migrate from Objective-C to Swift">
+  <meta property="og:description" content="Disclaimer Link to heading My background is an engineer with less than two years of industrial mobile development experience and less than a year in iOS (with some experience doing the server-side as well as Android development on the side), so you will probably find this post:
+Beginner-friendly Containing flaw/nonoptimal/simply stupid/etc solutions. But hey, it works. At least Fabric agree with me (we started migration at the end of March).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-05-27T07:00:00+07:00">
+    <meta property="article:modified_time" content="2017-05-27T07:00:00+07:00">
+    <meta property="article:tag" content="IOS">
+    <meta property="article:tag" content="Migration">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/migrate-from-objective-c-to-swift/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liem Ly
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/migrate-from-objective-c-to-swift/">
+              Migrate from Objective-C to Swift
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2017-05-27T07:00:00&#43;07:00">
+                May 27, 2017
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/ios/">IOS</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/migration/">Migration</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="disclaimer">
+  Disclaimer
+  <a class="heading-link" href="#disclaimer">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>My background is an engineer with less than two years of industrial mobile development experience and less than a year in iOS (with some experience doing the server-side as well as Android development on the side), so you will probably find this post:</p>
+<ul>
+<li>Beginner-friendly</li>
+<li>Containing flaw/nonoptimal/simply stupid/etc solutions. But hey, it works. At least Fabric agree with me (we started migration at the end of March).</li>
+</ul>
+<p><img src="/assets/migrate-from-objective-c-to-swift/crash-rate.png" alt="Crash rate"></p>
+<p>Nevertheless, I would truly appreciate for any correction and suggestion to make this article a better guide for people who want to make a switch.</p>
+<h2 id="context">
+  Context
+  <a class="heading-link" href="#context">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The reasons why we choose to migrate to Swift:</p>
+<ul>
+<li>Swift is easier to write, and is less error-prone.</li>
+<li>Swift is the new (nah, not that new in 2017) official programming language for iOS development =&gt; future-proof</li>
+<li>Swift is the language that are attracting more and more developers from the Objective-C developers, and from people who is new to iOS development</li>
+</ul>
+<p>Before making the migration, here are some of our presumption:</p>
+<p>[ ] The migration can be done incrementally. We does not have to done everything at once</p>
+<p>[ ] The stability should not be degraded after switching</p>
+<p>[ ] The speed of development should not compromised</p>
+<h2 id="solutions">
+  Solutions
+  <a class="heading-link" href="#solutions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Background:
+We have 4 different targets when building our app as follows</p>
+<p>ChoppDev: for development, where we will do testing locally on our own computer
+ChoppStaging: for staging, where we will do testing internally in our team
+Chopp: for production, which will be released through App Store
+Chopp-Cal: for UI testing with Calabash</p>
+<h3 id="setup-andbasic">
+  Setup and basic
+  <a class="heading-link" href="#setup-andbasic">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You can have a look at the detailed documentation from Apple. But I will summarize it specifically for our project</p>
+<ul>
+<li>Singularize the product module name for all targets (e.g: Chopp). This is the reason why I mentioned four targets previously, many tutorials only tell us to use product module name, but they don&rsquo;t consider the case of different targets</li>
+<li>Create a bridging header file to use the Objective C in Swift by:
+<ul>
+<li>Create a bridging header file (e.g: Chopp-Bridging-Header.h)</li>
+<li>Add the path to bridging header file in Build Settings =&gt; Objective-C Bridging Header (e.g: Chopp/Chopp-Bridging-Header.h)</li>
+</ul>
+</li>
+<li>To use Swift in Objective-C file, just use &lsquo;import &ldquo;(Project Module Name)-Swift.h&rdquo;&rsquo; (e.g: Chopp-Swift.h) in Objective C file</li>
+</ul>
+<h3 id="beyond-basic">
+  Beyond basic
+  <a class="heading-link" href="#beyond-basic">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>There are some cases where we need to make extra effort to make these two compatible with each other:</p>
+<h3 id="constants-and-delegate">
+  Constants and delegate
+  <a class="heading-link" href="#constants-and-delegate">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>To use swift constants and delegate in existing Objective-C, we have to add @obj for the singleton class, and inherit NSObject. So it is like</p>
+<p><code>@objc class Constant:NSObject</code></p>
+<h3 id="swift-singleton">
+  Swift singleton
+  <a class="heading-link" href="#swift-singleton">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Similar to the previous one, we have to have @objc and NSObject. After that, instead of using a famous one line singleton</p>
+<pre tabindex="0"><code>class TheOneAndOnlyKraken {
+    static let sharedInstance = TheOneAndOnlyKraken()
+}
+</code></pre><p>we have to use this</p>
+<pre tabindex="0"><code>@objc class CPRewardHelper: NSObject {
+    class var swiftSharedInstance: Helper {
+        struct Singleton {
+            static let instance = Helper()
+        }
+        return Singleton.instance
+    }
+    class func sharedInstance() -&gt; Helper {
+        return Helper.swiftSharedInstance
+    }
+}
+</code></pre><p>Tips: at first, to avoid making mistakes, and for ease of testing at first. We focus on the custom view and cell since these are less of a dependency for others</p>
+<h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Let go over the presumption once again</p>
+<p>[x] The migration can be done incrementally. We does not have to done everything at once =&gt; YES, we have had approximately 1/5 of the code translated to Swift, and the speed keeps increasing. Except for the beginning of the migration, which takes us a few hours, everything went smoothly</p>
+<p>[x] The stability should not be degraded after switching =&gt; YES, as you could see from our Fabric crash data. We still maintain the data at 100% for at least 1/3 of the time. On some bad days, it may go down to 99%. Actually, all of the crash is occured from either old Objective-C code or library code. However, we are not satisfied with the crash rate yet. Our goal is still trying to keep the crash rate as close to 100% as possible, and we do not compromise on 99%</p>
+<p>[x] The speed of development should not compromised =&gt; YES, we still release new build every one or two weeks, with new feature every two week or four week. Our first priotity is still to bring better and better experience for the users</p>
+<p>Overall, we are satisfied with our choice. The migration does not show any significant impact to app stability and performance, but it truly enhance the developers experience. With Swift, we could write code at the faster speed, with less errors (we treat Optional seriously, try to avoid ! at all cost)</p>
+<p>NOTE: Since Kotlin is now an official programming language for Android development, we are also considering that too :)</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Liem Ly 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R1T2DMPBB"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1R1T2DMPBB');
+        }
+      </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

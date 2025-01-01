@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev-Tool on Liem Ly</title>
+    <link>http://localhost:1313/tags/dev-tool/</link>
+    <description>Recent content in Dev-Tool on Liem Ly</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Nov 2018 07:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dev-tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker for local development</title>
+      <link>http://localhost:1313/posts/docker-for-local-development/</link>
+      <pubDate>Sat, 24 Nov 2018 07:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/docker-for-local-development/</guid>
+      <description>&lt;p&gt;I first came across Docker two years ago, when I started working at Chopp. At that time, we are using Docker on our staging and production. Jenkins will run some tests through the code, building the Docker images, and deploy them to desired destinations. Now, after I joining Parcel Perform, I have had a chance to use Docker more extensively, even in local environment, and there are some noticeable changes compared to the old method that I could realize over a course of a month&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

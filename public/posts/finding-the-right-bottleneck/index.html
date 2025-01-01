@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Finding the right bottleneck · Liem Ly
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liem Ly">
+<meta name="description" content="One of my favorite area of software engineer is performance tuning. No matter which kind of software I am writing, a desktop/mobile/web app, or even a script, I always want it to super fast, with as little resource as possible. Yet, there have been some occurrences that I have wrote/failed to detect some bottlenecks that makes me closer to my wishes.
+In university, when I was doing a website development for event, we run into free-tier bandwidth limit of Google App Engine after a few hours when the number of users spike. I tried to optimize in many ways, including but not limited to: minify source code, optimize process, cache. In the end, I found out that there is one single image that I had not optimized, and it was on the main page of the website. Thus, each main page loading in fact takes MBs of bandwidth. After finding out the problem and optimizing the images, the bandwidth never go over 25% again. In another word, ~8 times less bandwidth used.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Finding the right bottleneck">
+  <meta name="twitter:description" content="One of my favorite area of software engineer is performance tuning. No matter which kind of software I am writing, a desktop/mobile/web app, or even a script, I always want it to super fast, with as little resource as possible. Yet, there have been some occurrences that I have wrote/failed to detect some bottlenecks that makes me closer to my wishes.
+In university, when I was doing a website development for event, we run into free-tier bandwidth limit of Google App Engine after a few hours when the number of users spike. I tried to optimize in many ways, including but not limited to: minify source code, optimize process, cache. In the end, I found out that there is one single image that I had not optimized, and it was on the main page of the website. Thus, each main page loading in fact takes MBs of bandwidth. After finding out the problem and optimizing the images, the bandwidth never go over 25% again. In another word, ~8 times less bandwidth used.">
+
+<meta property="og:url" content="http://localhost:1313/posts/finding-the-right-bottleneck/">
+  <meta property="og:site_name" content="Liem Ly">
+  <meta property="og:title" content="Finding the right bottleneck">
+  <meta property="og:description" content="One of my favorite area of software engineer is performance tuning. No matter which kind of software I am writing, a desktop/mobile/web app, or even a script, I always want it to super fast, with as little resource as possible. Yet, there have been some occurrences that I have wrote/failed to detect some bottlenecks that makes me closer to my wishes.
+In university, when I was doing a website development for event, we run into free-tier bandwidth limit of Google App Engine after a few hours when the number of users spike. I tried to optimize in many ways, including but not limited to: minify source code, optimize process, cache. In the end, I found out that there is one single image that I had not optimized, and it was on the main page of the website. Thus, each main page loading in fact takes MBs of bandwidth. After finding out the problem and optimizing the images, the bandwidth never go over 25% again. In another word, ~8 times less bandwidth used.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-03-15T07:00:00+07:00">
+    <meta property="article:modified_time" content="2018-03-15T07:00:00+07:00">
+    <meta property="article:tag" content="Optimization">
+    <meta property="article:tag" content="Aws">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/finding-the-right-bottleneck/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liem Ly
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/finding-the-right-bottleneck/">
+              Finding the right bottleneck
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2018-03-15T07:00:00&#43;07:00">
+                March 15, 2018
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/optimization/">Optimization</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/aws/">Aws</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>One of my favorite area of software engineer is performance tuning. No matter which kind of software I am writing, a desktop/mobile/web app, or even a script, I always want it to super fast, with as little resource as possible. Yet, there have been some occurrences that I have wrote/failed to detect some bottlenecks that makes me closer to my wishes.</p>
+<p>In university, when I was doing a website development for event, we run into free-tier bandwidth limit of Google App Engine after a few hours when the number of users spike. I tried to optimize in many ways, including but not limited to: minify source code, optimize process, cache. In the end, I found out that there is one single image that I had not optimized, and it was on the main page of the website. Thus, each main page loading in fact takes MBs of bandwidth. After finding out the problem and optimizing the images, the bandwidth never go over 25% again. In another word, ~8 times less bandwidth used.</p>
+<p>Another example would be when I was working on optimize our initialization at Chopp. The initialization endpoint at that time would take approximately 2–4s to respond. When we are requesting to the endpoint, there were about &gt;10 processes to gather data from different sources. At first, we (I and Tuan Nguyen) were planning to split up this process, so the first initialization will be faster. Yet, what amazes us is that, we found out a single process that takes up close to 100% of the total time. We went on to identify the problem with that process, and have it fixed in one night. After that optimization, the initialization endpoint response reduced to 400–500 ms (Postman). It would be 4–8 times faster.</p>
+<p>The last example would be an incident with AWS. With the expansion our whole ecosystem, we have seen an ever-increasing price in the billing. recently, we decided to tackle with this one. There were several small things that we have done: removing the unused resources, making change to instance type. Still, among all the changes, there is ONE that is equal to all others combined. In our Redis, we have set the wrong expire date for one type of data. This takes our 10 times more storage than what we need. By setting a more proper expire date, and modifying that instance, we have reduced our total AWS cost by 1/4 :)</p>
+<p>Of course, there would be many required optimization among all the systems we are all working on. What I learned from all of the lessons are that, quite often, there are few optimization that can have significant improvement on our whole system (80–20 rules ?). With the limited time and resource, we should identify and solve those make real impact, then the leftover would be insignificant.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Liem Ly 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R1T2DMPBB"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1R1T2DMPBB');
+        }
+      </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

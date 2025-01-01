@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Lessons learned from interview engineers (P.1) · Liem Ly
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liem Ly">
+<meta name="description" content="
+  CVs are (often) exaggerated
+  
+    
+    Link to heading
+  
+
+After screening and interviewing several candidates, I saw a real difference between what they wrote on their resume and what they truly know/did. I have seen several people claiming a bunch of programming languages on their CV despite having only 1,2 or even 0 years of professional experience. It turns out they have only tried out those in &ldquo;Hello World&rdquo; programs.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lessons learned from interview engineers (P.1)">
+  <meta name="twitter:description" content="CVs are (often) exaggerated Link to heading After screening and interviewing several candidates, I saw a real difference between what they wrote on their resume and what they truly know/did. I have seen several people claiming a bunch of programming languages on their CV despite having only 1,2 or even 0 years of professional experience. It turns out they have only tried out those in “Hello World” programs.">
+
+<meta property="og:url" content="http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/">
+  <meta property="og:site_name" content="Liem Ly">
+  <meta property="og:title" content="Lessons learned from interview engineers (P.1)">
+  <meta property="og:description" content="CVs are (often) exaggerated Link to heading After screening and interviewing several candidates, I saw a real difference between what they wrote on their resume and what they truly know/did. I have seen several people claiming a bunch of programming languages on their CV despite having only 1,2 or even 0 years of professional experience. It turns out they have only tried out those in “Hello World” programs.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-05-21T07:00:00+07:00">
+    <meta property="article:modified_time" content="2017-05-21T07:00:00+07:00">
+    <meta property="article:tag" content="Interview">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liem Ly
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/">
+              Lessons learned from interview engineers (P.1)
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2017-05-21T07:00:00&#43;07:00">
+                May 21, 2017
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/interview/">Interview</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="cvs-are-often-exaggerated">
+  CVs are (often) exaggerated
+  <a class="heading-link" href="#cvs-are-often-exaggerated">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>After screening and interviewing several candidates, I saw a real difference between what they wrote on their resume and what they truly know/did. I have seen several people claiming a bunch of programming languages on their CV despite having only 1,2 or even 0 years of professional experience. It turns out they have only tried out those in &ldquo;Hello World&rdquo; programs.</p>
+<p>IMO, I will only put a new programming language if I have at least implemented a new feature in a small to medium size program or makes several changes on a large one. Otherwise, it will be very difficult for a candidate to live up to the CV :). Moreover, I also notice this phenomenon more often on fresh graduate. As they have done few projects, they tends to put more programming language and more small programs into their CV in the hope that it will make up for the industrial experience.</p>
+<h2 id="ego-can-hinder-yoursuccess">
+  Ego can hinder your success
+  <a class="heading-link" href="#ego-can-hinder-yoursuccess">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>At Chopp, we often have simple hands-on technical interviews in which the candidates will work on a problem together with one of our engineers. In this session, we do not only test their technical skills, but we also want to see how well will one collaborate with other people. The reason for this kind of test is because we think is it important to judge one&rsquo;s potential by their ability to collaborate and willingness to learn than their skill set alone. From the interview online, quite often, the one who are open to feedback and collaboration will produce better result than doing it all alone.</p>
+<p>To illustrate, there is a case of a fresh graduate candidate who seems to be very knowledgable when explaining his past projects. However, the technical exercise does not go so well. Even though I had explained to him that my responsbility there was to solve the problem together with him, not testing him, he keeps insiting me on letting him do things in his way, and ignoring all my advice. In the end, he could not finish even half of the exercise. I cannot say for certain that the advice may help him complete the problem perfectly, but I am quite sure that it can help him find out the solution much faster.</p>
+<pre tabindex="0"><code>No matter how gifted you are, you alone cannot change the world.
+L, L:Change The World
+</code></pre>
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Liem Ly 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R1T2DMPBB"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1R1T2DMPBB');
+        }
+      </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
