@@ -2,25 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/be-a-rockstar-but-not-irreplacable/</loc>
-    <lastmod>2022-10-09T10:18:00+07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2022-10-09T10:18:00+07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2022-10-09T10:18:00+07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2022-10-09T10:18:00+07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/thoughts/</loc>
-    <lastmod>2022-10-09T10:18:00+07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/initial-experience-with-kafka/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2020-08-02T07:00:00+07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/message-queue/</loc>
+    <lastmod>2020-08-02T07:00:00+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2020-08-02T07:00:00+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/dev-tool/</loc>
@@ -69,11 +63,5 @@
     <lastmod>2017-02-25T07:00:00+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/database/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/postgresql/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/autovacuum/</loc>
   </url>
 </urlset>
