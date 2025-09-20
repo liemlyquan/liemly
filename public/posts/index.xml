@@ -13,7 +13,7 @@
       <link>//localhost:1313/posts/initial-experience-with-kafka/</link>
       <pubDate>Sun, 02 Aug 2020 07:00:00 +0700</pubDate>
       <guid>//localhost:1313/posts/initial-experience-with-kafka/</guid>
-      <description>&lt;p&gt;Before starting my job at Parcel Perform, the usage of Kafka, or message queue in general, would sound ridiculous to me. I just thought to myself: &amp;ldquo;why do we have to add complexity to our system, instead of processing the data, we have to put it into a place, and then consume from that&amp;rdquo;. However, after months of using that, I have started to realize how (mostly) wrong I am.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Before starting my job at Parcel Perform, the usage of Kafka, or message queue in general, would sound ridiculous to me. I thought to myself: &amp;ldquo;why do we have to add complexity to our system, instead of processing the data, we have to put it into a place, and then later on consume from that&amp;rdquo;. However, after months of using that, I have started to realize how (mostly) wrong I am.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Docker for local development</title>

@@ -11,7 +11,7 @@ externalLink = ""
 series = []
 +++
 
-Before starting my job at Parcel Perform, the usage of Kafka, or message queue in general, would sound ridiculous to me. I just thought to myself: "why do we have to add complexity to our system, instead of processing the data, we have to put it into a place, and then consume from that". However, after months of using that, I have started to realize how (mostly) wrong I am.
+Before starting my job at Parcel Perform, the usage of Kafka, or message queue in general, would sound ridiculous to me. I thought to myself: "why do we have to add complexity to our system, instead of processing the data, we have to put it into a place, and then later on consume from that". However, after months of using that, I have started to realize how (mostly) wrong I am.
 ## Asynchronous processing
 One thing to keep in mind is that here is that Kafka should only be used for asynchronous processing. One example is when a client sends a request to your system, they only need to know that the request went through, and do not need to know/see the result of the request immediately.
 There could also be a mix of them.
