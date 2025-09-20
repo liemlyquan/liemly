@@ -2,66 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/initial-experience-with-kafka/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>//localhost:1313/posts/initial-experience-with-kafka/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/message-queue/</loc>
+    <loc>//localhost:1313/tags/message-queue/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dev-tool/</loc>
+    <loc>//localhost:1313/tags/dev-tool/</loc>
     <lastmod>2018-11-24T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/docker-for-local-development/</loc>
+    <loc>//localhost:1313/posts/docker-for-local-development/</loc>
     <lastmod>2018-11-24T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/aws/</loc>
+    <loc>//localhost:1313/tags/aws/</loc>
     <lastmod>2018-03-15T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/finding-the-right-bottleneck/</loc>
+    <loc>//localhost:1313/posts/finding-the-right-bottleneck/</loc>
     <lastmod>2018-03-15T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/optimization/</loc>
+    <loc>//localhost:1313/tags/optimization/</loc>
     <lastmod>2018-03-15T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/giving-a-recommendation/</loc>
+    <loc>//localhost:1313/posts/giving-a-recommendation/</loc>
     <lastmod>2018-03-11T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/random/</loc>
+    <loc>//localhost:1313/tags/random/</loc>
     <lastmod>2018-03-11T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ios/</loc>
+    <loc>//localhost:1313/tags/ios/</loc>
     <lastmod>2017-05-27T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/migrate-from-objective-c-to-swift/</loc>
+    <loc>//localhost:1313/posts/migrate-from-objective-c-to-swift/</loc>
     <lastmod>2017-05-27T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/migration/</loc>
+    <loc>//localhost:1313/tags/migration/</loc>
     <lastmod>2017-05-27T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/interview/</loc>
+    <loc>//localhost:1313/tags/interview/</loc>
     <lastmod>2017-05-21T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</loc>
+    <loc>//localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</loc>
     <lastmod>2017-05-21T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/digitalocean/</loc>
+    <loc>//localhost:1313/tags/digitalocean/</loc>
     <lastmod>2017-02-25T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/install-opencart-on-digitalocean/</loc>
+    <loc>//localhost:1313/posts/install-opencart-on-digitalocean/</loc>
     <lastmod>2017-02-25T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/opencart/</loc>
+    <loc>//localhost:1313/tags/opencart/</loc>
     <lastmod>2017-02-25T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url>
 </urlset>

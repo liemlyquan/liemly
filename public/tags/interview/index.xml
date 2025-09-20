@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Interview on Liem Ly</title>
-    <link>http://localhost:1313/tags/interview/</link>
-    <description>Recent content in Interview on Liem Ly</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
+    <title>Interview on </title>
+    <link>//localhost:1313/tags/interview/</link>
+    <description>Recent content in Interview on </description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 21 May 2017 07:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/interview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lessons learned from interview engineers (P.1)</title>
-      <link>http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</link>
+      <link>//localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</link>
       <pubDate>Sun, 21 May 2017 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</guid>
-      <description>&lt;h2 id=&#34;cvs-are-often-exaggerated&#34;&gt;CVs are (often) exaggerated&lt;/h2&gt;&#xA;&lt;p&gt;After screening and interviewing several candidates, I saw a real difference between what they wrote on their resume and what they truly know/did. I have seen several people claiming a bunch of programming languages on their CV despite having only 1,2 or even 0 years of professional experience. It turns out they have only tried out those in &amp;ldquo;Hello World&amp;rdquo; programs.&lt;/p&gt;&#xA;&lt;p&gt;IMO, I will only put a new programming language if I have at least implemented a new feature in a small to medium size program or makes several changes on a large one. Otherwise, it will be very difficult for a candidate to live up to the CV :). Moreover, I also notice this phenomenon more often on fresh graduate. As they have done few projects, they tends to put more programming language and more small programs into their CV in the hope that it will make up for the industrial experience.&lt;/p&gt;</description>
+      <guid>//localhost:1313/posts/lessons-learned-from-interview-engineers-p1/</guid>
+      <description>&lt;h2 id=&#34;cvs-are-often-exaggerated&#34;&gt;CVs are (often) exaggerated&lt;/h2&gt;
+&lt;p&gt;After screening and interviewing several candidates, I saw a real difference between what they wrote on their resume and what they truly know/did. I have seen several people claiming a bunch of programming languages on their CV despite having only 1,2 or even 0 years of professional experience. It turns out they have only tried out those in &amp;ldquo;Hello World&amp;rdquo; programs.&lt;/p&gt;
+&lt;p&gt;IMO, I will only put a new programming language if I have at least implemented a new feature in a small to medium size program or makes several changes on a large one. Otherwise, it will be very difficult for a candidate to live up to the CV :). Moreover, I also notice this phenomenon more often on fresh graduate. As they have done few projects, they tends to put more programming language and more small programs into their CV in the hope that it will make up for the industrial experience.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

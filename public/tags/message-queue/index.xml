@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Message-Queue on Liem Ly</title>
-    <link>http://localhost:1313/tags/message-queue/</link>
-    <description>Recent content in Message-Queue on Liem Ly</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
+    <title>Message-Queue on </title>
+    <link>//localhost:1313/tags/message-queue/</link>
+    <description>Recent content in Message-Queue on </description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 02 Aug 2020 07:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/message-queue/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/message-queue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Initial experience with Kafka</title>
-      <link>http://localhost:1313/posts/initial-experience-with-kafka/</link>
+      <link>//localhost:1313/posts/initial-experience-with-kafka/</link>
       <pubDate>Sun, 02 Aug 2020 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/posts/initial-experience-with-kafka/</guid>
+      <guid>//localhost:1313/posts/initial-experience-with-kafka/</guid>
       <description>&lt;p&gt;Before starting my job at Parcel Perform, the usage of Kafka, or message queue in general, would sound ridiculous to me. I just thought to myself: &amp;ldquo;why do we have to add complexity to our system, instead of processing the data, we have to put it into a place, and then consume from that&amp;rdquo;. However, after months of using that, I have started to realize how (mostly) wrong I am.&lt;/p&gt;</description>
     </item>
   </channel>

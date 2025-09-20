@@ -1,0 +1,36 @@
+theme: ["PaperMod"]
+params:
+  env: production
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowWordCount: true
+
+  homeInfoParams:
+    Title: Liem Ly
+    Content: Manager. Engineer. Human
+
+  socialIcons: # optional
+    - name: "Github"
+      url: "https://github.com/liemlyquan"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/liemlyquan/"
+    - name: "Email"
+      url: "mailto:liemlyquan@gmail.com"
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+menu:
+  main:
+    - identifier: archives
+      name: archives
+      url: /archives/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20

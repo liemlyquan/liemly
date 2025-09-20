@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Liem Ly</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Liem Ly</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
+    <title>Tags on </title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on </description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 02 Aug 2020 07:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Message-Queue</title>
-      <link>http://localhost:1313/tags/message-queue/</link>
+      <link>//localhost:1313/tags/message-queue/</link>
       <pubDate>Sun, 02 Aug 2020 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/message-queue/</guid>
+      <guid>//localhost:1313/tags/message-queue/</guid>
       <description></description>
     </item>
     <item>
       <title>Dev-Tool</title>
-      <link>http://localhost:1313/tags/dev-tool/</link>
+      <link>//localhost:1313/tags/dev-tool/</link>
       <pubDate>Sat, 24 Nov 2018 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/dev-tool/</guid>
+      <guid>//localhost:1313/tags/dev-tool/</guid>
       <description></description>
     </item>
     <item>
       <title>Aws</title>
-      <link>http://localhost:1313/tags/aws/</link>
+      <link>//localhost:1313/tags/aws/</link>
       <pubDate>Thu, 15 Mar 2018 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/aws/</guid>
+      <guid>//localhost:1313/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>Optimization</title>
-      <link>http://localhost:1313/tags/optimization/</link>
+      <link>//localhost:1313/tags/optimization/</link>
       <pubDate>Thu, 15 Mar 2018 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/optimization/</guid>
+      <guid>//localhost:1313/tags/optimization/</guid>
       <description></description>
     </item>
     <item>
       <title>Random</title>
-      <link>http://localhost:1313/tags/random/</link>
+      <link>//localhost:1313/tags/random/</link>
       <pubDate>Sun, 11 Mar 2018 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/random/</guid>
+      <guid>//localhost:1313/tags/random/</guid>
       <description></description>
     </item>
     <item>
       <title>IOS</title>
-      <link>http://localhost:1313/tags/ios/</link>
+      <link>//localhost:1313/tags/ios/</link>
       <pubDate>Sat, 27 May 2017 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/ios/</guid>
+      <guid>//localhost:1313/tags/ios/</guid>
       <description></description>
     </item>
     <item>
       <title>Migration</title>
-      <link>http://localhost:1313/tags/migration/</link>
+      <link>//localhost:1313/tags/migration/</link>
       <pubDate>Sat, 27 May 2017 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/migration/</guid>
+      <guid>//localhost:1313/tags/migration/</guid>
       <description></description>
     </item>
     <item>
       <title>Interview</title>
-      <link>http://localhost:1313/tags/interview/</link>
+      <link>//localhost:1313/tags/interview/</link>
       <pubDate>Sun, 21 May 2017 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/interview/</guid>
+      <guid>//localhost:1313/tags/interview/</guid>
       <description></description>
     </item>
     <item>
       <title>Digitalocean</title>
-      <link>http://localhost:1313/tags/digitalocean/</link>
+      <link>//localhost:1313/tags/digitalocean/</link>
       <pubDate>Sat, 25 Feb 2017 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/digitalocean/</guid>
+      <guid>//localhost:1313/tags/digitalocean/</guid>
       <description></description>
     </item>
     <item>
       <title>Opencart</title>
-      <link>http://localhost:1313/tags/opencart/</link>
+      <link>//localhost:1313/tags/opencart/</link>
       <pubDate>Sat, 25 Feb 2017 07:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/opencart/</guid>
+      <guid>//localhost:1313/tags/opencart/</guid>
       <description></description>
     </item>
   </channel>
