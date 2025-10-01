@@ -6,8 +6,15 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Aug 2020 07:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 20 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Management</title>
+      <link>//localhost:1313/tags/management/</link>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/management/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Message-Queue</title>
       <link>//localhost:1313/tags/message-queue/</link>

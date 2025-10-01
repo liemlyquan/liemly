@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2020-08-02T07:00:00+07:00</lastmod>
+    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/management/</loc>
+    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/two-years-as-an-em/</loc>
+    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/initial-experience-with-kafka/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/message-queue/</loc>
-    <lastmod>2020-08-02T07:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2020-08-02T07:00:00+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
     <lastmod>2020-08-02T07:00:00+07:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/dev-tool/</loc>
