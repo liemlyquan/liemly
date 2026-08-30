@@ -6,6 +6,7 @@ params:
   ShowBreadCrumbs: true
   ShowPostNavLinks: true
   ShowWordCount: true
+  title: 'Liem Ly'
 
   homeInfoParams:
     Title: Liem Ly
