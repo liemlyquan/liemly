@@ -1,4 +1,5 @@
 theme: ["PaperMod"]
+title: 'Liem Ly'
 params:
   env: production
   ShowReadingTime: true
@@ -6,7 +7,7 @@ params:
   ShowBreadCrumbs: true
   ShowPostNavLinks: true
   ShowWordCount: true
-  title: 'Liem Ly'
+
 
   homeInfoParams:
     Title: Liem Ly
